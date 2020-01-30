@@ -12,11 +12,37 @@ baudRate = 115200
 
 arduinoData = serial.Serial(serialPort, baudRate) #Initialize serialMon
 
+plt.ion() #interactive mode
+
+sensor0 = []
+sensor1 = []
+counter = 0
+
+def makePlot():
+    plt.ylim(25,35)
+    plt.title("Leitura Sensores")
+    plt.ylabel("Temperatura °C")
+    plt.plot(sensor0, 'ro-', label="Sensor 1")
+    plt.legend(loc="upper left")
+
+
 while True:
     while (arduinoData.inWaiting() == 0): #Wait until there is Data available
         pass
     arduinoString = arduinoData.readline().decode('ASCII') #read and convert str to byte
     temperature = arduinoString.split(',')
-    print(float(temperature[0]))
-    print(float(temperature[1]))
+    
+    sensor0.append(float(temperature[0]))
+    sensor1.append(float(temperature[1]))
+    
+    # print(float(temperature[0]))
+    # print(float(temperature[1]))
 
+    drawnow(makePlot)
+    plt.pause(.000001)
+
+    counter += 1 #clean data points for better visualization
+    if (counter > 50):
+        sensor0.pop(0)
+        sensor1.pop(1)
+        
