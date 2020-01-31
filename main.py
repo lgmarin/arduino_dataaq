@@ -6,11 +6,19 @@ import serial
 import matplotlib.pyplot as plt
 from drawnow import *
 
+# #List serial ports available
+# serial_ports = [
+#     ports.device
+#     #ports.description #get ports description
+#     for ports in serial.tools.list_ports.comports()
+# ]
+
 #Set serial port settings here!
 serialPort = '/dev/ttyUSB0'
 baudRate = 115200
 
 arduinoData = serial.Serial(serialPort, baudRate) #Initialize serialMon
+arduinoData.flushInput() #Clean data queue
 
 plt.ion() #interactive mode
 
@@ -23,7 +31,10 @@ def makePlot():
     plt.title("Leitura Sensores")
     plt.ylabel("Temperatura °C")
     plt.plot(sensor0, 'ro-', label="Sensor 1")
-    plt.legend(loc="upper left")
+    plt.plot(sensor1, 'go-', label="Sensor 2")
+    #plt.legend(loc="upper left")
+    plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
+    plt.subplots_adjust(right=0.76)
 
 
 while True:
@@ -45,4 +56,3 @@ while True:
     if (counter > 50):
         sensor0.pop(0)
         sensor1.pop(1)
-        
