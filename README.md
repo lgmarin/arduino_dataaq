@@ -1,3 +1,5 @@
+Data Acquisition App for Arduino
+
 To run, use:
 
 pip install - U matplotlib pyserial wxPython
