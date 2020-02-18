@@ -1,4 +1,12 @@
 Data Acquisition App for Arduino
+=======================================
+
+Introduction
+-------------------------
+This app was developped to help with temperature readings from an Arduino based data acquisition for my Master Thesis project.
+
+Usage and Installation
+-------------------------
 
 To run, use:
 
