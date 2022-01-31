@@ -19,4 +19,6 @@ Development of a simple UI tha allows reading the temperature on the fly and gen
 
 ## Dependencies
 
-* matplotlib, pyserial and wxPython - pip install -U matplotlib pyserial wxPython
+* matplotlib, pyserial and wxPython
+
+    pip install -U matplotlib pyserial wxPython
