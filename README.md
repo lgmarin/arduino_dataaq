@@ -3,7 +3,7 @@
 ## _Data Acquisition Software based in Arduino_
 [![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 
-This software was developped as part of my Masters in Mechanical Engineering project. I was in need of a reliable way of measuring temperature in different points.
+This software was developed as part of my Masters in Mechanical Engineering project. I was in need of a reliable way of measuring temperature in different points.
 
 The hardware allows for 5 different data points, collected by 5 MAX6675 Digital Converters.
 
@@ -19,6 +19,6 @@ Development of a simple UI tha allows reading the temperature on the fly and gen
 
 ## Dependencies
 
-* matplotlib, pyserial and wxPython
+matplotlib, pyserial and wxPython
 
     pip install -U matplotlib pyserial wxPython
