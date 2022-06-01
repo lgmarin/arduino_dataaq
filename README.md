@@ -2,7 +2,7 @@
 
 ## _Data Acquisition Software based in Arduino_
 ![](https://img.shields.io/badge/Arduino-informational?style=flat&logo=arduino&logoColor=white&color=#00979D)
-[](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=python&logoColor=white&color=blue)
+![](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=python&logoColor=white&color=blue)
 [![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 
 This software was developed as part of my Masters in Mechanical Engineering project. I was in need of a reliable way of measuring temperature in different points.
